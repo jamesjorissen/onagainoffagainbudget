@@ -5,24 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#317EFB">
-  <link rel="shortcut icon" href="icons/icon-192x192.png" type="image/x-icon">
+  <link
+      rel="shortcut icon"
+      href="icons/icon-192x192.png"
+      type="image/x-icon"
+    />
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="/manifest.json" />
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="styles.css">
-
-  <title>Budget Tracker</title>
+  <title>On-Again Off-Again Budget</title>
 </head>
 <body>
   <div class="wrapper">
     <div class="total">
-      <div class="total">Your total is: $<span id="total">0</span></div>
+      <div class="total">Your total: $<span id="total">0</span></div>
     </div>
 
     <div class="form">
       <input type="text" id="t-name" placeholder="Name of transaction" />
       <input type="number" min="0" id="t-amount" placeholder="Transaction amount" />
-      <button id="add-btn"><i class="fa fa-plus buttons"></i> Add Funds</button>
-      <button id="sub-btn"><i class="fa fa-minus"></i> Subtract Funds</button>
+      <button id="add-btn"><i class="fa fa-plus buttons"></i> Add Monies</button>
+      <button id="sub-btn"><i class="fa fa-minus"></i> Subtract Monies</button>
       <p class="error"></p>
     </div>
 
@@ -30,7 +37,7 @@
       <table>
         <thead>
           <th>Transaction</th>
-          <th>Amount</th>
+          <th>Value</th>
         </thead>
         <tbody id="tbody">
           
@@ -43,5 +50,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="index.js"></script>
+  <script src="db.js"></script>
 </body>
 </html>
