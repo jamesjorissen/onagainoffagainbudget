@@ -30,7 +30,7 @@ request.onerror = function (e) {
 
 function saveRecord(record) {
 
-    const transaction = db.transaction(["standby"], "initialize");
+    const transaction = db.transaction(["standby"], "readwrite");
 
 
     const store = transaction.objectStore("standby");
@@ -41,7 +41,7 @@ function saveRecord(record) {
 
 function checkDatabase() {
 
-    const transaction = db.transaction(["standby"], "initialize");
+    const transaction = db.transaction(["standby"], "readwrite");
 
     const store = transaction.objectStore("standby");
 
@@ -60,7 +60,7 @@ function checkDatabase() {
                 .then((response) => response.json())
                 .then(() => {
 
-                    const transaction = db.transaction(["standby"], "initiate");
+                    const transaction = db.transaction(["standby"], "readwrite");
 
 
                     const store = transaction.objectStore("standby");
